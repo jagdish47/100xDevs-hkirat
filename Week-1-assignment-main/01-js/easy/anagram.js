@@ -8,7 +8,21 @@
 */
 
 function isAnagram(str1, str2) {
+  if (str1.length != str2.length) {
+    return false;
+  }
 
+  let one = str1.split("").sort().join("");
+  let two = str2.split("").sort().join("");
+
+  if (one == two) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-module.exports = isAnagram;
+let ans = isAnagram("car", "rac");
+console.log(ans);
+
+module.exports = isAnagram();
